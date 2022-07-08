@@ -1,0 +1,287 @@
+{% extends "AV_Analytics/home.html" %}
+
+{% block content %}
+<div class="m-10">
+    <!-- First Row -->
+    <div class="flex w-full gap-20">
+        <!-- Title divide-x divide-->
+        <div class="w-9/12 text-left border flex "> 
+            <!-- Column 1 -->
+            <div class="w-7/12 p-8">
+                <div class="text-center">
+                    <h1 > {{ company.name }} - {{ company.ticker }}</h1>
+                    <p> {{company.sector}} - {{company.industry}}</p>
+                    <p> {{company.country}} - {{company.exchange_sort}} </p>
+                </div>
+                <br>
+                <div class="text-justify text-sm">
+                    {{company.description}}
+                </div>
+            </div>
+            <!-- Column 2 -->
+            <div class="w-5/12 flex flex-col gap-x-12 gap-y-4 p-8 semi-border">
+                <div class="items-center text-center flex justify-around gap-4">
+                    <!-- Price Info -->
+                    <div>
+                        <h1 class="text-4xl">{{cof.currency_symbol}}{{company.price}}</h1>
+                        <p class=" font-bold {% if company.change > 0%} text-green-500 {% else %} text-red-500 {% endif %} ">{{cof.currency_symbol}}{{company.change}} ({{cof.change_percentage}}%)</p>
+                    </div>
+                    
+                    
+                    
+                    <!-- End of Price Info -->
+                    
+
+                </div>
+                <div class="flex">
+                    <div class="w-1/2 flex justify-center">
+                        <div>
+                            <p>Low: <b>{{company.low}}</b></p>
+                            <p>High: <b>{{company.high}}</b></p>
+                            <p>Beta: <b>{{company.beta}}</b></p>
+                            <p>Vol. Average: <b>{{cof.volume_average}} M</b></p>
+                        </div>
+                    </div>
+                    <div class="w-1/2 flex justify-center">
+                        <ul>
+                            <li>Ytd: <span  class="font-bold {% if company.change_ytd > 0%} text-green-500 {% else %} text-red-500 {% endif %}">{{company.change_ytd}}%</span></li>
+                            <li>1 year: <span  class="font-bold {% if company.change_1y > 0%} text-green-500 {% else %} text-red-500 {% endif %}">{{company.change_1y}}%</span></li>
+                            <li>3 year: <span  class="font-bold {% if company.change_3y > 0%} text-green-500 {% else %} text-red-500 {% endif %}">{{company.change_3y}}%</span></li>
+                            <li>5 year: <span  class="font-bold {% if company.change_5y > 0%} text-green-500 {% else %} text-red-500 {% endif %}">{{company.change_5y}}%</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="w-1/2 mx-auto my-4">
+                <div class="flex justify-around gap-4 text-center">
+                    <div>
+                        <p class="font-bold text-2xl">{{cof.currency_symbol}}{{cof.market_cap}}B</p>
+                        <p>Market Cap</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-2xl">{{cof.currency_symbol}}{{cof.enterprise_value}}B</p>
+                        <p>Enterprise Value</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="flex justify-around gap-4 text-center">
+                    <div>
+                        <p class="font-bold text-2xl">{{company.institutional_ownership}}%</p>
+                        <p class="text-sm">Institutional <br> Ownership</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-2xl">{{company.insider_ownership}}%    </p>
+                        <p class="text-sm">Insider <br>  Ownership</p>
+                    </div>
+                </div>
+                
+                <div class="flex mt-8">
+                    <!-- Column 1 -->
+                    <div class="w-1/2 flex justify-center">
+                        <div>
+                            <p class="text-sm">Last Dividend: <span>{{cof.currency_symbol}}{{company.last_dividend}}</span></p>
+                            <p class="text-sm">Employees: <span>{{cof.number_of_employees}}</span></p>
+                            <p class="text-sm">IPO Date: <span>{{company.ipo_date}}</span></p>
+                        </div>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="w-1/2 flex justify-center">
+                        <div>
+                            <p class="text-sm">Short interest: <span>X</span></p>
+                            <p class="text-sm">Shares: <span>X</span></p>
+                            <p class="text-sm">Earnings date: <span class="">X</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Title -->
+
+        <!-- Price Section -->
+        <div class="w-3/12 flex flex-col gap-4">
+            
+
+            <div class="border-y border py-4 px-8 items-center flex flex-col gap-4">
+                <!-- Valutation Ratios -->
+                <div class="flex flex-col ">
+                    <p class="text-left text-sm mb-4">Valuation Summary</p>
+                    <div class="flex justify-around gap-8">
+                        <div>
+                            <p class="text-sm">PER</p>
+                            <p class="font-bold text-2xl">15x</p>
+                        </div>
+                        <div>
+                            <p class="text-sm">P/FCF</p>
+                            <p class="font-bold text-2xl">17x</p>
+                        </div>
+                        <div>
+                            <p class="text-sm">PEG</p>
+                            <p class="font-bold text-2xl">1.02x</p>
+                        </div>
+                        <div>
+                            <p class="text-sm">EV/EBITDA</p>
+                            <p class="font-bold text-2xl">14x</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="flex justify-around gap-8">
+                        <div>
+                            <p class="text-sm">PER</p>
+                            <p class="font-bold text-2xl">15x</p>
+                        </div>
+                        <div>
+                            <p class="text-sm">P/FCF</p>
+                            <p class="font-bold text-2xl">17x</p>
+                        </div>
+                        <div>
+                            <p class="text-sm">PEG</p>
+                            <p class="font-bold text-2xl">1.02x</p>
+                        </div>
+                        <div>
+                            <p class="text-sm">EV/EBITDA</p>
+                            <p class="font-bold text-2xl">14x</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End of Valutation Ratios -->
+
+                
+
+            </div>
+            <div class="border-y border  py-4 px-8 items-center flex flex-col gap-4">
+                <!-- Sugested Valuations -->
+                <div>
+                    <p class="italic text-center text-sm">Sugested Valuations</p>
+                    <br>
+                    <div class="flex flex-col">
+                        <p>DCF: <span class="font-bold">{{company.dcf}}</span> <span  class="{% if cof.dcf_diff > 0%} text-green-500 {% else %} text-red-500 {% endif %}">({{cof.dcf_diff}}%)</span></p>
+                        <p>Hitorical PE: <span class="font-bold">111.5</span> <span  class="text-red-500">(-10.5%)</span></p>
+                        <p>Historical PEG: <span class="font-bold">1.02</span> <span  class="text-red-500">(-0.5%)</span></p>
+                        <p>Historical EV/EBITDA: <span class="font-bold">14.5</span> <span  class="text-red-500">(-0.5%)</span></p>
+
+                    </div>
+                </div>
+                <!-- End of Sugested Valuations -->
+            </div>
+        </div>
+        <!-- End of Price Section -->
+        
+    </div>
+    <!-- End of First Row -->
+
+    
+    <!-- Third Row -->
+    <div class="my-8 ">
+        <div class="text-sm mb-2 font-medium text-center text-zinc-400 border-b border-zinc-200 w-9/12">
+            <ul class="flex flex-wrap">
+                <li class="mr-2" >
+                    <button onclick="tabs('Overview')" id="Overview" class="active inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-zinc-900 hover:border-zinc-900  transition duration-200">Overview</button>
+                </li>
+                <li class="mr-2" >
+                    <button onclick="tabs('Income_Statement')" id="Income_Statement" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-zinc-900 hover:border-zinc-900  transition duration-200">Income Statement</button>
+                </li>
+                <li class="mr-2" >
+                    <button onclick="tabs('Balance_Sheet')" id="Balance_Sheet" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-zinc-900 hover:border-zinc-900 transition duration-200">Balance Sheet</button>
+                </li>
+                <li class="mr-2" >
+                    <button onclick="tabs('Cash_Flow_Statement')" id="Cash_Flow_Statement" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-zinc-900 hover:border-zinc-900  transition duration-200">Cash Flow Statement</button>
+                </li>
+            </ul>
+        </div>
+        <div class="flex gap-4 ">
+            <div class="w-7/12 max-w-7/12 border">
+                <div class="Overview">
+                    <div class="relative overflow-x-auto ">
+                    {% autoescape on %}
+                        {{ overview_df|safe  }}
+                    {% endautoescape %}
+                    </div>
+                </div>
+                <div class="hidden Income_Statement">
+                    <div class="relative overflow-x-auto ">
+                    {% autoescape on %}
+                        {{ is_df|safe  }}
+                    {% endautoescape %}
+                    </div>
+                </div>
+        
+                <div class="hidden Balance_Sheet">
+                    <div class="relative overflow-x-auto ">
+                    {% autoescape on %}
+                        {{ bs_df|safe  }}
+                    {% endautoescape %}
+                    </div>
+                </div>
+
+                <div class="hidden Cash_Flow_Statement">
+                    <div class="relative overflow-x-auto ">
+                    {% autoescape on %}
+                        {{ fcf_df|safe  }}
+                    {% endautoescape %}
+                    </div>
+                </div>
+            </div>
+            <!-- GROWTH -->
+            <div class="w-5/12 max-w-5/12 flex gap-4">
+                <div class="w-1/2 max-w-1/2">
+                    <div class="hidden Income_Statement">
+
+                        <div class="relative overflow-x-auto ">
+                        {% autoescape on %}
+                            {{ is_growth_df|safe  }}
+                        {% endautoescape %}
+                        </div>
+                    </div>
+            
+                    <div class="hidden Balance_Sheet">
+                        <div class="relative overflow-x-auto ">
+                        {% autoescape on %}
+                            {{ bs_growth_df|safe  }}
+                        {% endautoescape %}
+                        </div>
+                    </div>
+        
+                    <div class="hidden Cash_Flow_Statement">
+                        <div class="relative overflow-x-auto ">
+                        {% autoescape on %}
+                            {{ fcf_growth_df|safe  }}
+                        {% endautoescape %}
+                        </div>
+                    </div>
+                </div>
+                <!-- CAGR GROWTH -->
+                <div class="w-1/2 max-w-1/2">
+                    <div class="hidden Income_Statement">
+                        <div class="relative overflow-x-auto ">
+                        {% autoescape on %}
+                            {{ is_cagr_growth_df|safe  }}
+                        {% endautoescape %}
+                        </div>
+                    </div>
+            
+                    <div class="hidden Balance_Sheet">
+                        <div class="relative overflow-x-auto ">
+                        {% autoescape on %}
+                            {{ bs_cagr_growth_df|safe  }}
+                        {% endautoescape %}
+                        </div>
+                    </div>
+        
+                    <div class="hidden Cash_Flow_Statement">
+                        <div class="relative overflow-x-auto ">
+                        {% autoescape on %}
+                            {{ fcf_cagr_growth_df|safe  }}
+                        {% endautoescape %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Third Row -->
+
+
+</div>
+{% endblock content %}

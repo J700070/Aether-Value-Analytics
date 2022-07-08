@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 200;
+    font-style: normal;
+    src: url("/font/SourceSerifPro/SourceSerifPro-ExtraLight.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+2010, U+2013-2014, U+2018-2019, U+201C-201D;
+    /*  for body text, display as soon as possible (presumably as system font Baskerville)
+        and re-render with Source Serif Pro whenever it downloads:
+        https://developers.google.com/web/updates/2016/02/font-display
+        https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
+        https://caniuse.com/#search=font-display
+        */
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 200;
+    font-style: italic;
+    src: url("/font/SourceSerifPro/SourceSerifPro-ExtraLightItalic.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 300;
+    font-style: normal;
+    src: url("/font/SourceSerifPro/SourceSerifPro-Light.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 300;
+    font-style: italic;
+    src: url("/font/SourceSerifPro/SourceSerifPro-LightItalic.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/font/SourceSerifPro/SourceSerifPro-Regular.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 400;
+    font-style: italic;
+    src: url("/font/SourceSerifPro/SourceSerifPro-RegularItalic.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 600;
+    font-style: normal;
+    src: url("/font/SourceSerifPro/SourceSerifPro-Semibold.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 600;
+    font-style: italic;
+    src: url("/font/SourceSerifPro/SourceSerifPro-SemiboldItalic.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 700;
+    font-style: normal;
+    src: url("/font/SourceSerifPro/SourceSerifPro-Bold.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 700;
+    font-style: italic;
+    src: url("/font/SourceSerifPro/SourceSerifPro-BoldItalic.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 900;
+    font-style: normal;
+    src: url("/font/SourceSerifPro/SourceSerifPro-Black.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Source Serif Pro";
+    font-weight: 900;
+    font-style: italic;
+    src: url("/font/SourceSerifPro/SourceSerifPro-BlackItalic.ttf") format("truetype");
+    unicode-range: U+0020-007E, U+00A0-00FF, U+2010, U+2013-2014, U+2018-2019, U+201C-201D, U+2212;
+    font-display: swap;
+}

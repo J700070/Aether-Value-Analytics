@@ -1,0 +1,28 @@
+{% extends "AV_Analytics/home.html" %}
+
+{% block content %}
+<div class="px-10">
+    <div class="py-4 flex flex-col text-center">
+        <h1 class="font-extrabold">Data Collection</h1>
+        <p> Collect data for the different companies. </p>
+    </div>
+    <hr>
+
+    <div class="flex justify-center w-full p-4">
+        <form action="{% url 'get_company_data' %}" method="POST" class="text-center">
+            {% csrf_token %}
+            <label for="ticker"><b>Get or Update Data for Ticker</b></label>
+            <br>
+            <input id="ticker"  class="m-2" type="text" name="ticker" placeholder="Ticker">
+        </form>
+        
+        
+    </div>
+    <div  class="flex flex-col w-1/2">
+        
+    </div>
+
+</div>
+
+{% endblock content%}
+

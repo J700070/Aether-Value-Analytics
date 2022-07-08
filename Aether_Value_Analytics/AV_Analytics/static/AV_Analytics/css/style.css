@@ -1,0 +1,238 @@
+@charset "UTF-8";
+@import "fonts.css";
+
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #fafafa;
+    color: #27272a;
+    min-height: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+input[type=text] {
+    color:#27272a;
+}
+
+h1 {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+
+.errorlist{
+    color: #ff0000;
+    font-size: small;
+}
+
+
+.dataframe{
+    text-align: left;
+    border-width: 1px;
+    
+}
+
+.dataframe thead{
+    background-color: #3f3f46;
+    color: #fafafa;
+
+}
+
+
+.dataframe thead tr th{
+    font-size: 90%;
+    text-align: right ;
+    padding-top: 0.15rem; /* 12px */
+    padding-bottom: 0.15rem; /* 12px */
+    padding-left: 0.6rem; 
+    padding-right: 0.6rem; 
+    
+}
+
+.dataframe tbody tr {
+    border-bottom-width: 1px;
+}
+
+.dataframe tbody tr th {
+    border-right-width: 1px;
+    padding-top: 0.15rem; 
+    padding-bottom: 0.15rem; 
+    padding-left: 0.5rem; 
+    padding-right: 0.5rem;
+    white-space: nowrap;
+    font-weight: normal;
+
+    max-width: 250px;
+    width: 250px;
+}
+
+
+.dataframe tbody tr td {
+    font-family: calibri;
+    font-weight: light;
+    font-size: 15px;
+    text-align: right ;
+    padding-top: 0.25rem; 
+    padding-bottom: 0.25rem; 
+    padding-left: 0.6rem; 
+    padding-right: 0.6rem; 
+    white-space: nowrap;
+
+    max-width: 100%;
+
+
+}
+
+/* INCOME STATEMENT TABLE */
+.Income_Statement tbody tr:nth-child(3) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Income_Statement tbody tr:nth-child(4) {
+    font-weight: bold;
+    background-color: #f4f4f5;
+}
+.Income_Statement tbody tr:nth-child(15) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Income_Statement tbody tr:nth-child(16) {
+    font-weight: bold;
+    background-color: #f4f4f5;
+}
+.Income_Statement tbody tr:nth-child(17) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Income_Statement tbody tr:nth-child(18) {
+    font-weight: bold;
+    background-color: #f4f4f5;
+}
+.Income_Statement tbody tr:nth-child(23) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Income_Statement tbody tr:nth-child(24) {
+    font-weight: bold;
+    background-color: #f4f4f5;
+}
+
+/* BALANCE SHEET TABLE */
+.Balance_Sheet tbody tr:nth-child(3) {
+    font-weight: bold;
+    background-color: #f4f4f5;
+}
+
+.Balance_Sheet tbody tr:nth-child(7) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Balance_Sheet tbody tr:nth-child(12) {
+    font-weight: bold;
+    background-color: #f4f4f5;
+}
+.Balance_Sheet tbody tr:nth-child(15) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Balance_Sheet tbody tr:nth-child(17) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+
+.Balance_Sheet tbody tr:nth-child(23) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+
+.Balance_Sheet tbody tr:nth-child(28) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Balance_Sheet tbody tr:nth-child(31) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Balance_Sheet tbody tr:nth-child(40) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Balance_Sheet tbody tr:nth-child(41) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Balance_Sheet tbody tr:nth-child(42) {
+    font-weight: bold;
+    background-color: #f4f4f5;
+}
+.Balance_Sheet tbody tr:nth-child(43) {
+    font-weight: bold;
+    background-color: #f4f4f5;
+}
+.Balance_Sheet tbody tr:nth-child(44) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+
+/* CASH FLOW TABLE */
+.Cash_Flow_Statement tbody tr:nth-child(4) {
+    font-weight: bold;
+    background-color: #f4f4f5;
+}
+.Cash_Flow_Statement tbody tr:nth-child(11) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Cash_Flow_Statement tbody tr:nth-child(17) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Cash_Flow_Statement tbody tr:nth-child(23) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Cash_Flow_Statement tbody tr:nth-child(28) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+.Cash_Flow_Statement tbody tr:nth-child(29) {
+    font-weight: bold;
+    background-color: #f4f4f5;
+}
+.Cash_Flow_Statement tbody tr:nth-child(30) {
+    font-weight: bold;
+    background-color: #e4e4e7;
+}
+
+
+
+
+
+.semi-border{
+    position: relative;
+}
+
+.semi-border:after {
+    content: "";
+    background: #d4d4d8;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    height: 60%;
+    width: 1px;
+  }
+
+
+.active{
+    color: #18181b;
+    border-color: #18181b;
+
+}

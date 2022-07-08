@@ -1,0 +1,29 @@
+<aside class="w-full flex justify-center" aria-label="Sidebar">
+   <!-- Search Bar -->
+   <form id="logo-search" class="absolute my-2 form-inline my-lg-0 left-2" action="{% url 'search' %}" method="GET">
+      <a class="float-left text-4xl font-bold mx-4" href="{% url 'index' %}">AVA</a>
+      <input class=" mr-sm-2 rounded-lg text-black" id="ticker" type="search" name="ticker" placeholder="Search">
+   </form>
+
+   <!-- Main Buttons -->
+   <div class="overflow-y-auto py-4 px-3 h-full rounded ">
+      <div class=" flex">
+         <div>
+            <a href="{% url 'data_collection' %}" class="flex items-center p-2 text-base font-normal rounded-lg text-zinc-700 hover:bg-zinc-700 transition duration-75 hover:text-zinc-100">
+            <svg class="flex-shrink-0 w-6 h-6" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+               <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V8a2 2 0 00-2-2h-5L9 4H4zm7 5a1 1 0 10-2 0v1.586l-.293-.293a1 1 0 10-1.414 1.414l2 2 .002.002a.997.997 0 001.41 0l.002-.002 2-2a1 1 0 00-1.414-1.414l-.293.293V9z" />
+               </svg>
+               <span class="flex-1 ml-3 whitespace-nowrap">Data Collection</span>
+            </a>
+         </div>
+         <div>
+         <a href="{% url 'data_analysis' %}" class="flex items-center p-2 text-base font-normal rounded-lg text-zinc-700 hover:bg-zinc-700 transition duration-75 hover:text-zinc-100">
+               <svg class="flex-shrink-0 w-6 h-6"  xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+               <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+               </svg> 
+               <span class="flex-1 ml-3 whitespace-nowrap">Data Analysis</span>
+            </a>
+         </div>
+      </div>
+   </div>
+ </aside>

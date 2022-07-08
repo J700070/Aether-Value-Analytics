@@ -1,0 +1,30 @@
+{% extends "AV_Analytics/home.html" %}
+
+{% block content %}
+    <!-- Hide logo and search bar on main page -->
+    <style> #logo-search { display: none } </style>
+    <div class="py-4 h-full grow flex flex-col justify-center">
+        <div class="-translate-y-32">
+            <h1 class="font-bold text-6xl text-center tracking-wider">Aether Value <br>Analytics</h1>
+            <p class = "pt-8 text-center tracking-wider">
+                Home page of the AV Analytics project.
+            </p>
+            <div class="py-8 flex justify-center">
+                <form action="" method="POST" class="w-1/2 ">
+                    <div class="flex justify-center">
+                        {% csrf_token %}
+                        <!-- errors -->
+                        {{form.ticker}}
+                    </div>
+                </form>
+            </div>
+            <p class=" text-center tracking-wider">Try <a href="{% url 'company' 'AAPL' %}"><b>Apple</b></a>,
+                <a href="{% url 'company' 'AMZN' %}"><b>Amazon</b> or <a href="{% url 'company' 'TSLA' %}"><b>Tesla</b></a></a></p>
+
+
+        </div>
+    </div>
+    
+    
+{% endblock content%}
+

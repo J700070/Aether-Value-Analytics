@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+      {% load static %}
+      {% load static tailwind_tags %}
+
+      <meta charset='utf-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <title>AV Analytics</title>
+      <meta name='viewport' content='width=device-width, initial-scale=1'>
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      {% tailwind_css %}
+
+      <link rel="stylesheet" type="text/css" href="{% static 'AV_Analytics/css/style.css' %}"> 
+      <script src="{% static 'AV_Analytics/js/company.js' %}"></script> 
+
+  </head>
+
+  <body class= "flex  flex-col min-h-screen ">
+      <div class="w-full">
+        {% include 'AV_Analytics/topbar.html' %}
+      </div>
+      <div class="h-full flex flex-col grow">
+        {% block content %}
+        {% endblock content %}
+      </div>
+  </body>
+</html>
